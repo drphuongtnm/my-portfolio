@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Font Lilita One -->
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Open+Sans&family=Oswald:wght@700&family=PT+Mono&family=Ubuntu+Mono&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-[#FEFCF3]">
+      <nav class="flex pt-6  justify-between items-center w-[92%] mx-auto">
+      <div class="flex items-center">
+        <img class="md:w-16 w-12" src="https://media.giphy.com/media/AkhXtoYF4NgKgyXfNs/giphy.gif" alt="">
+        <p class="text-[40px] font-vt323">Welcome</p>
+      </div>
+      <div class="flex items-center gap-5 ">
+        <div [ngClass]="{'top-[16.4%]': menuOpen, 'top-[-100%]': !menuOpen}" class="transition-all duration-300 lg-transition-none md:static md:min-h-fit md:w-auto md:rounded-full md:drop-shadow-lg  absolute min-h-[60vh] left-0 w-full flex items-center px-5  bg-[#FEFCF3]  text-[#606C5D]">
+          <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 ">
+            <a href="#home">
+              <li class="text-[40px] font-vt323 hover:text-black hover:cursor-pointer">home</li>
+            </a>
+            <a href="#about">
+              <li class="text-[40px] font-vt323 hover:text-black hover:cursor-pointer">about</li>
+            </a>
+            <a href="#project">
+              <li class="text-[40px] font-vt323 hover:text-black hover:cursor-pointer">project</li>
+            </a>
+            <a href="#contact">
+              <li class="text-[40px] font-vt323 hover:text-black hover:cursor-pointer">contact</li>
+            </a>
+          </ul>
+        </div>
+        <div class="md:hidden">
+          <mat-icon (click)="onToggleMenu()" class="text-[30px] cursor-pointer">{{ menuOpen ? 'close' : 'menu' }}</mat-icon>
+        </div>
+        
+        
+      </div>
+      
+    </nav>
+  </header>
+    <main class="container bg-[#F5EFE6]">
+          <!-- HOME -->
+      <section id="home" class=" md:pt-16">
+        <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 px-[100px]">
+          <div class="md:order-last">
+            <img class="animate right" src="../img/avatar.svg" alt="">
+          </div>
+          <div class="md:mt-7 md:space-y-9 space-y-5 content-center">
+            <p class="font-heading md:text-4xl text-xl animate left">Hello, my name is My&nbsp;Phuong</p>
+            <p class="font-desc md:text-lg text-base animate left">A diligent Information System student at the University of Information Technology with strong education and volunteering experience. Keen to pursue a career as a Front-end Developer</p>
+            <div class="grid gap-10 grid-cols-2 animate left">
+              <button class="p-2 rounded-lg bg-[#7895B2] text-white font-vt323 md:text-3xl text-xl 3 hover:border-slate-400">DOWNLOAD CV</button>
+              <button class="p-2 rounded-lg bg-white text-[#7895B2] font-vt323 md:text-3xl text-xl 3 border-4 border-[#7895B2]-500/100 hover:border-slate-400">LINKEDIN</button>
+            </div>
+          </div>
+        </div>
+        
+        
+      </section>
+  <!-- ABOUT -->
+      <section id="about" class="md:pt-16">
+        <div class=" grid md:grid-cols-2 grid-cols-1 md:gap-4 px-[100px]">
+          <div class="md:order-last">
+            <img src="../img/about-img.svg" alt="">
+          </div>
+          <div class="md:space-y-9 space-y-5">
+            <p class="font-heading md:text-4xl text-xl text">Curiosity, Diligence & Honesty</p>
+            <p class="font-desc md:text-lg my-10 text">
+              I am currently a student at the University of Information Technology in Ho Chi Minh city.  I am passionate about pursuing a career as a Front-end Developer since i enjoy making products that people love. In the future, if given the opportunity to learn more, I would be more than willing to explore and take on the role of a Full-stack Developer. However, at this moment, my primary focus remains on becoming a skilled Front-end Developer.</p>
+              <div class="grid gap-10 md:grid-cols-2 grid-cols-1">
+                <button class="rounded-lg bg-[#7895B2]  text-white font-vt323 md:text-3xl text-xl p-3 hover:border-slate-400">DOWNLOAD CV</button>
+              </div>
+          </div>
+        </div>
+        
+        
+      </section>
+  
+      <!-- PROJECT -->
+      <section id="project" class="md:pt-16">
+        <div class="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-16 px-[100px]">
+          <!-- Personal projects -->
+          <div class="">
+            <p class="font-heading md:text-4xl text-xl">Personal projects</p>
+            
+            <!-- project card -->
+              <div class="grid grid-cols-2 md:mt-20 mt-7 bg-[#F5EFE6] border-4 border-[#606C5D] rounded-lg h-64 md:w-11/12">
+                <div class="grid grid-cols-1 gap-1 m-3">
+                  <p class="font-vt323 md:text-3xl text-xl">Project name</p>
+                  <p class="font-desc md:text-lg text-base line-clamp-4">Lorem ipsum dolor sit amet consectetur. Ut vitae sit tristique ut nunc faucibus amet. Nulla duis posuere quis phasellus non proin nunc. Eros convallis pretium eu massa. </p>
+                  <div class="grid md:grid-cols-3 ">
+                    <button class="rounded-lg bg-[#7895B2] text-white font-vt323 text-xl  hover:border-slate-400">View</button>
+                  </div>
+                </div>
+                <div class="bg-[#606C5D] "></div>
+              </div>
+              <!-- project card -->
+              <div class="grid grid-cols-2 md:mt-20 mt-7 bg-[#F5EFE6] border-4 border-[#606C5D] rounded-lg h-64 md:w-11/12">
+                <div class="grid grid-cols-1 gap-1 m-3">
+                  <p class="font-vt323 md:text-3xl text-xl">Project name</p>
+                  <p class="font-desc md:text-lg text-base line-clamp-4">Lorem ipsum dolor sit amet consectetur. Ut vitae sit tristique ut nunc faucibus amet. Nulla duis posuere quis phasellus non proin nunc. Eros convallis pretium eu massa. </p>
+                  <div class="grid md:grid-cols-3 ">
+                    <button class="rounded-lg bg-[#7895B2] text-white font-vt323 text-xl  hover:border-slate-400">View</button>
+                  </div>
+                </div>
+                <div class="bg-[#606C5D] "></div>
+              </div>
+
+            
+          
+          </div>
+          <!-- School project -->
+          <div class="">
+            <p class="font-heading md:text-4xl text-xl">School projects</p>
+            <!-- project card -->
+            <div class="grid grid-cols-2 md:mt-20 mt-7 bg-[#F5EFE6] border-4 border-[#606C5D] rounded-lg h-64 md:w-11/12">
+              <div class="grid grid-cols-1 gap-1 m-3">
+                <p class="font-vt323 md:text-3xl text-xl">Project name</p>
+                <p class="font-desc md:text-lg text-base line-clamp-4">Lorem ipsum dolor sit amet consectetur. Ut vitae sit tristique ut nunc faucibus amet. Nulla duis posuere quis phasellus non proin nunc. Eros convallis pretium eu massa. </p>
+                <div class="grid md:grid-cols-3 ">
+                  <button class="rounded-lg bg-[#7895B2] text-white font-vt323 text-xl  hover:border-slate-400">View</button>
+                </div>
+              </div>
+              <div class="bg-[#606C5D] "></div>
+            </div>
+
+            <!-- project card -->
+            <div class="grid grid-cols-2 md:mt-20 mt-7 bg-[#F5EFE6] border-4 border-[#606C5D] rounded-lg h-64 md:w-11/12">
+              <div class="grid grid-cols-1 gap-1 m-3">
+                <p class="font-vt323 md:text-3xl text-xl">Project name</p>
+                <p class="font-desc md:text-lg text-base line-clamp-4">Lorem ipsum dolor sit amet consectetur. Ut vitae sit tristique ut nunc faucibus amet. Nulla duis posuere quis phasellus non proin nunc. Eros convallis pretium eu massa. </p>
+                <div class="grid md:grid-cols-3 ">
+                  <button class="rounded-lg bg-[#7895B2] text-white font-vt323 text-xl  hover:border-slate-400">View</button>
+                </div>
+              </div>
+              <div class="bg-[#606C5D] "></div>
+            </div>
+
+          </div>
+        </div>
+        
+      </section>
+  
+      <!-- CONTACT -->
+      <div id="contact" class="pt-28 md:pt-0 md:h-[80vh] text-center space-y-9 px-[100px]">
+        <p class="md:text-[200px] text-7xl font-sans text-center md:opacity-10	">CONTACT</p>
+        <div class="md:flex grid grid-cols-2 md:justify-around md:ml-[20%] md:mr-[3%] md:-translate-y-32">
+          <a class="flex justify-center items-center mb-12"  href="https://github.com/myphuong92" target="_blank">
+            <svg class="w-20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+          </a>
+          <a class="flex justify-center items-center mb-12" href="">
+            <svg class="w-20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg>
+          </a>
+          <a class="flex justify-center items-center mb-12" href="https://www.instagram.com/tn_myphuong/" target="_blank">        
+            <svg class="w-20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+          </a>
+          <a class="flex justify-center items-center mb-12" href="https://www.linkedin.com/in/phuong-tran-9a7a0a278/" target="_blank">        
+            <svg class="w-20" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#000000}</style><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+          </a>
+          
+                
+         
+  
+        </div>
+  
+      </div>
+      
+    </main>
+    <script>
+      // function onToggleMenu(e){
+      //   console.log(e)
+      // }
+      const body = document.body,
+              scrollWrap = document.getElementById("about"),
+                height = scrollWrap.getBoundingClientRect().height - 1,
+                speed = 0.04;
+
+            var offset = 0;
+
+            body.style.height = Math.floor(height) + "px";
+
+            function smoothScroll() {
+                offset += (window.pageYOffset - offset) * speed;
+
+                var scroll = "translateY(-" + offset + "px) translateZ(0)";
+                scrollWrap.style.transform = scroll;
+
+                callScroll = requestAnimationFrame(smoothScroll);
+            }
+
+            smoothScroll();
+
+            $(function () {
+                var elements = $(".text").toArray();
+                $(window).scroll(function () {
+                    elements.forEach(function (item) {
+                        if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                            $(item).addClass("reveal");
+                        }
+                    });
+                });
+                elements.forEach(function (item) {
+                    if ($(this).scrollTop() >= $(item).offset().top - 400) {
+                        $(item).addClass("reveal");
+                    }
+                });
+            });
+
+    </script>
+    <script src="./script.js"></script>
+     
+  </body>
+</html>
